@@ -130,7 +130,7 @@ export default function TabsComponent() {
 			</Menu>
 			{/* <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}> */}
 			<SortableContext items={tabs} strategy={verticalListSortingStrategy}>
-				<div className='flex flex-row overflow-hidden w-full h-full items-center justify-center  '>
+				<div className='flex flex-row overflow-hidden w-full h-full items-center  '>
 					{tabs.map(tab => (
 						<SortableTab
 							key={tab.id}
