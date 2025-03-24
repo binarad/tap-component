@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import './globals.css'
-import TabsComponent from './TabsComponent'
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -23,14 +21,5 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode
 }>) {
-	return (
-		<html lang='en'>
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
-			>
-				<TabsComponent />
-				{children}
-			</body>
-		</html>
-	)
+	return <div className='-z-10'>{children}</div>
 }
